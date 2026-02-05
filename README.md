@@ -2,7 +2,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/)
 [![C++](https://img.shields.io/badge/C++-17-green.svg)](https://isocpp.org/)
-[![Performance](https://img.shields.io/badge/2025_ROI-31.52%25-brightgreen.svg)]()
 
 An end-to-end quantitative trading system I engineered for high-alpha tech assets. This project represents my approach to hybrid architecture—combining Python’s flexibility for specific alpha research with C++ for performance-critical execution logic. 
 
