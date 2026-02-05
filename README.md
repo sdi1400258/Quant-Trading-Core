@@ -4,13 +4,13 @@
 [![C++](https://img.shields.io/badge/C++-17-green.svg)](https://isocpp.org/)
 [![Performance](https://img.shields.io/badge/2025_ROI-31.52%25-brightgreen.svg)]()
 
-An end-to-end quantitative trading system engineered for high-alpha tech assets. This project demonstrates a hybrid architecture—combining Python’s flexibility for alpha research with C++ for performance-critical execution logic. 
+An end-to-end quantitative trading system I engineered for high-alpha tech assets. This project represents my approach to hybrid architecture—combining Python’s flexibility for specific alpha research with C++ for performance-critical execution logic. 
 
-Designed with a **"Risk-First" philosophy**, the system prioritizes capital preservation through rigorous backtesting, cynical cost modeling, and multi-layered loss prevention.
+Designed with a **"Risk-First" philosophy**, I prioritized capital preservation through rigorous backtesting, cynical cost modeling, and multi-layered loss prevention.
 
 ## Architecture & Engineering Design
 
-The system is decoupled into modular layers:
+I decoupled the system into modular layers to maintain separation of concerns:
 
 | Layer | Responsibility | Technology |
 | :--- | :--- | :--- |
@@ -29,7 +29,10 @@ The system is decoupled into modular layers:
 The core strategy is a Trend-Following system optimized for the S&P 500 tech leaders (AAPL, NVDA, MSFT, etc.).
 
 ### 1. Alpha Factor
-Uses a dual-window EMA crossover with a **Trend Strength Filter**. Entries are only permitted when the relative distance between moving averages indicates a structural momentum phase rather than market noise.
+I implemented a dual-window EMA crossover with a **Trend Strength Filter**. I only permit entries when the relative distance between moving averages indicates a structural momentum phase rather than market noise.
+
+## Engineering Philosophy & Evolution
+I originally designed this as a high-leverage system but pivoted to a **Risk-Parity model** after analyzing the volatility drag on long-term returns. The key technical challenge was ensuring **determinism**—I wrote the backtester to be 100% reproducible by handling floating-point epsilon comparisons and enforcing strict sorting, ensuring that my simulation results are reliable artifacts, not just successful random seeds.
 
 ### 2. Risk-Based Allocation (Risk Parity)
 Instead of equal weighting, the system uses **Inverse Volatility Weighting**. Capital is dynamically shifted toward stable trends and reduced for assets exhibiting high idiosyncratic volatility, effectively normalizing the risk contribution across the portfolio.
@@ -41,7 +44,7 @@ Instead of equal weighting, the system uses **Inverse Volatility Weighting**. Ca
 
 ## Backtest Realism & Results
 
-Backtesting results are often misleading due to "frictionless" assumptions. This system employs a **Cynical Cost Model**:
+Backtesting results are often misleading due to "frictionless" assumptions. I constrained my engine with a **Cynical Cost Model**:
 *   **Slippage**: 10 basis points (bps) per trade to account for spread and market impact.
 *   **Commission**: 5 basis points (bps) per trade.
 
