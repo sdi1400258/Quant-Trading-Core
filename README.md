@@ -58,7 +58,7 @@ Backtesting results are often misleading due to "frictionless" assumptions. This
 ```bash
 # Clone and setup environment
 git clone https://github.com/sdi1400258/Quant-Trading-Core
-cd Algo-Trading
+cd Quant-Trading-Core
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
