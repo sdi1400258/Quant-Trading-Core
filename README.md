@@ -70,6 +70,4 @@ python main.py
 streamlit run src/monitoring/dashboard.py
 ```
 
-## Evolution & Design Notes
-This project evolved from a high-return, high-volatility "leveraged" system into a refined, risk-parity model. The key breakthrough was moving from chasing ROI to chasing **Risk-Adjusted Returns**. By implementing strict stop-losses and neutralizing the non-determinism in multicore environments, I've created a framework that behaves predictably under stress.
 
